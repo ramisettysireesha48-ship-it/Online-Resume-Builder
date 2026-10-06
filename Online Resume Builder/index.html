@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Resume<span>Builder</span></div>
+    <p>Create Your Professional Resume</p>
+</header>
+
+<div class="container">
+
+    <!-- FORM SECTION -->
+    <section class="form-section">
+
+        <h2>Build Your Resume</h2>
+
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Job Title</label>
+        <input type="text" id="job" placeholder="e.g. Web Developer">
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="example@gmail.com">
+
+        <label>Phone</label>
+        <input type="text" id="phone" placeholder="+91 9876543210">
+
+        <label>Location</label>
+        <input type="text" id="location" placeholder="Chennai, India">
+
+        <label>Career Objective</label>
+        <textarea id="objective" placeholder="Write your career objective"></textarea>
+
+        <h3>Education</h3>
+
+        <input type="text" id="degree" placeholder="Degree - B.Tech CSE">
+        <input type="text" id="college" placeholder="College Name">
+        <input type="text" id="year" placeholder="Year - 2027">
+
+        <h3>Skills</h3>
+
+        <input type="text" id="skills" placeholder="HTML, CSS, JavaScript, Python">
+
+        <h3>Work Experience</h3>
+
+        <textarea id="experience"
+            placeholder="Enter your internship or work experience"></textarea>
+
+        <h3>Projects</h3>
+
+        <textarea id="projects"
+            placeholder="Enter your project details"></textarea>
+
+        <button onclick="generateResume()">Generate Resume</button>
+        <button class="clear-btn" onclick="clearForm()">Clear</button>
+
+    </section>
+
+
+    <!-- RESUME PREVIEW -->
+    <section class="resume-section">
+
+        <div id="resume">
+
+            <div class="resume-header">
+                <h1 id="r-name">Your Name</h1>
+                <h2 id="r-job">Your Job Title</h2>
+
+                <p>
+                    <span id="r-email">email@example.com</span> |
+                    <span id="r-phone">+91 0000000000</span> |
+                    <span id="r-location">Your Location</span>
+                </p>
+            </div>
+
+            <div class="resume-content">
+
+                <h3>PROFILE</h3>
+                <p id="r-objective">
+                    Your career objective will appear here.
+                </p>
+
+                <h3>EDUCATION</h3>
+
+                <p>
+                    <strong id="r-degree">Your Degree</strong><br>
+                    <span id="r-college">Your College</span><br>
+                    <span id="r-year">Year</span>
+                </p>
+
+                <h3>SKILLS</h3>
+                <p id="r-skills">Your skills</p>
+
+                <h3>EXPERIENCE</h3>
+                <p id="r-experience">
+                    Your experience will appear here.
+                </p>
+
+                <h3>PROJECTS</h3>
+                <p id="r-projects">
+                    Your projects will appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+        <button class="print-btn" onclick="printResume()">
+            Download / Print Resume
+        </button>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
